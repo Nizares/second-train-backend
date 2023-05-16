@@ -11,9 +11,9 @@
         <input class="btn btn-primary mt-3" type="submit" value="Submit">
     </form>
 
-    <!-- {% if prediction %} -->
+    {% if prediction %}
     <p class="text-center"> Ini adalah Kunci Gitar "{{prediction}}"</p>
-    <!-- {% endif %} -->
+    {% endif %}
     <img src="{{ image_url }}" alt="Uploaded Image" style="width:200px;height:200px;align-items: center;">
 </body>
 </html>
