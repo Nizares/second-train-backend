@@ -1,0 +1,11 @@
+di cloud run masukan file requirement.txt install :
+pip install Flask Pillow numpy joblib gunicorn tensorflow mysql.connector matplotlib os google-cloud-storage
+
+langkah : predict basic backend, deploy di cloudrun atau local
+cara local :
+- buat virtual environment pada project install pip install Flask Pillow numpy joblib gunicorn tensorflow mysql.connector matplotlib os google-cloud-storage
+- buat project pada GCP
+- buat file app.py dan index.html
+- buat google storage bucket lalu beri akses public padanya public to "allUsers"
+- buat service account pada IAM, lalu buat key dialam service account yang dibuat lalu save keynya ke .json (serviceaccount.json)
+- lalu buat code dan isi sesuai dengan kerja
