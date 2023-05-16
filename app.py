@@ -14,16 +14,6 @@ lists = ["A", "B", "C", "D", "E", "F", "G"]
 
 model = load_model('Model_Saved.h5')
 
-# model.make_predict_function()
-
-# def predict_label(img_path):
-# 	i = image.load_img(img_path, target_size=(100,100))
-# 	i = image.img_to_array(i)/255.0
-# 	i = i.reshape(1, 100,100,3)
-# 	p = model.predict_classes(i)
-# 	return dic[p[0]]
-
-
 # routes
 @app.route("/")
 def main():
@@ -52,11 +42,6 @@ def predict():
     pred = lists[np.argmax(pred)]
     
     classify = pred
-    # # Make prediction using loaded model
-    # y_pred = model.predict(x)[0]
-
-    # # Return prediction result as JSON response
-    # return jsonify({'result': int(y_pred)})
     # return jsonify({'result': (pred)}, prediction=classify)
     return render_template('index.html', prediction=classify)
 if __name__ =='__main__':
